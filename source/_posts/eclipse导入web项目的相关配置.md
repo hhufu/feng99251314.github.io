@@ -22,7 +22,7 @@ tags:
 {% asset_img image-20200424144251447.png%}
 （6）选中项目，单击鼠标右键
 {% asset_img image-20200424144320991.png%}
-（7）双击报错地方
+（7）双击报错地方（这个子窗口是Libraries）
 {% asset_img image-20200424144445919.png%}
 
 （8）点击Environments 选择 JavaSE-1.8  点击 Apply and Close，最后点击finish
@@ -51,10 +51,10 @@ tags:
 
 选中项目，单击鼠标右键
 
-{% asset_img image-20200424144320991.png%}
+{% asset_img image-20200424145611025.png%}
 
 （16）我们发现，jdk错误
-{% asset_img image-20200424145611025.png%}
+{% asset_img image-20200424145652376.png%}
 
 （17）找到这里，把13改为1.8，Apply and Close
 {% asset_img image-20200424145904460.png%}
