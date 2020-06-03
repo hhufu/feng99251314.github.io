@@ -6,44 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://hhufu.cn">
-  <title>eclipse导入web项目的相关配置 | 行万里路，破万卷书</title>
+  <title>sql时间戳与日期相互转换 | 行万里路，破万卷书</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="以导入ch5为例 第一步：打开eclipse，导入项目（1）单击File">
+  <meta name="description" content="NOW()：当前日期时间SELECT UNIX_TIMESTAMP(NOW());将日期格式转成时间戳 1493016522 SELECT UNIX_TIMESTAMP(create_time); SELECT FROM_UNIXTIME(1493016148);将时间戳转成日期格式 2017-04-24 14:42:28">
 <meta property="og:type" content="article">
-<meta property="og:title" content="eclipse导入web项目的相关配置">
-<meta property="og:url" content="https://hhufu.cn/2020/05/03/eclipse%E5%AF%BC%E5%85%A5web%E9%A1%B9%E7%9B%AE%E7%9A%84%E7%9B%B8%E5%85%B3%E9%85%8D%E7%BD%AE/index.html">
+<meta property="og:title" content="sql时间戳与日期相互转换">
+<meta property="og:url" content="https://hhufu.cn/2020/06/03/sql%E6%97%B6%E9%97%B4%E6%88%B3%E4%B8%8E%E6%97%A5%E6%9C%9F%E7%9A%84%E8%BD%AC%E6%8D%A2/index.html">
 <meta property="og:site_name" content="行万里路，破万卷书">
-<meta property="og:description" content="以导入ch5为例 第一步：打开eclipse，导入项目（1）单击File">
+<meta property="og:description" content="NOW()：当前日期时间SELECT UNIX_TIMESTAMP(NOW());将日期格式转成时间戳 1493016522 SELECT UNIX_TIMESTAMP(create_time); SELECT FROM_UNIXTIME(1493016148);将时间戳转成日期格式 2017-04-24 14:42:28">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="http://q9y08g5p2.bkt.clouddn.com/201.png">
-<meta property="og:image" content="http://q9y08g5p2.bkt.clouddn.com/202.png">
-<meta property="og:image" content="http://q9y08g5p2.bkt.clouddn.com/203.png">
-<meta property="og:image" content="http://q9y08g5p2.bkt.clouddn.com/204.png">
-<meta property="og:image" content="http://q9y08g5p2.bkt.clouddn.com/205.png">
-<meta property="og:image" content="http://q9y08g5p2.bkt.clouddn.com/206.png">
-<meta property="og:image" content="http://q9y08g5p2.bkt.clouddn.com/207.png">
-<meta property="og:image" content="http://q9y08g5p2.bkt.clouddn.com/208.png">
-<meta property="og:image" content="http://q9y08g5p2.bkt.clouddn.com/209.png">
-<meta property="og:image" content="http://q9y08g5p2.bkt.clouddn.com/210.png">
-<meta property="og:image" content="http://q9y08g5p2.bkt.clouddn.com/211.png">
-<meta property="og:image" content="http://q9y08g5p2.bkt.clouddn.com/212.png">
-<meta property="og:image" content="http://q9y08g5p2.bkt.clouddn.com/213.png">
-<meta property="og:image" content="http://q9y08g5p2.bkt.clouddn.com/214.png">
-<meta property="og:image" content="http://q9y08g5p2.bkt.clouddn.com/215.png">
-<meta property="og:image" content="http://q9y08g5p2.bkt.clouddn.com/216.png">
-<meta property="og:image" content="http://q9y08g5p2.bkt.clouddn.com/2177.png">
-<meta property="og:image" content="http://q9y08g5p2.bkt.clouddn.com/218.png">
-<meta property="og:image" content="http://q9y08g5p2.bkt.clouddn.com/19.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MzM5NDg0MA==,size_16,color_FFFFFF,t_70">
-<meta property="og:image" content="http://q9y08g5p2.bkt.clouddn.com/220.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MzM5NDg0MA==,size_16,color_FFFFFF,t_70">
-<meta property="og:image" content="http://q9y08g5p2.bkt.clouddn.com/221.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MzM5NDg0MA==,size_16,color_FFFFFF,t_70">
-<meta property="article:published_time" content="2020-05-03T09:14:26.000Z">
-<meta property="article:modified_time" content="2020-05-07T05:10:07.948Z">
+<meta property="article:published_time" content="2020-06-03T14:29:26.782Z">
+<meta property="article:modified_time" content="2020-06-03T14:29:29.842Z">
 <meta property="article:author" content="还是那个你">
-<meta property="article:tag" content="Java">
-<meta property="article:tag" content="Jsp">
-<meta property="article:tag" content="Web">
+<meta property="article:tag" content="Mysql">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://q9y08g5p2.bkt.clouddn.com/201.png">
   
     <link rel="alternative" href="/atom.xml" title="行万里路，破万卷书" type="application/atom+xml">
   
@@ -182,53 +158,34 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-eclipse导入web项目的相关配置" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-sql时间戳与日期的转换" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      eclipse导入web项目的相关配置
+      sql时间戳与日期相互转换
     </h1>
   
 
 
   <a href="javascript:;" class="archive-article-date">
-      <i class="icon-smile icon"></i> 阅读数:<span id="/2020/05/03/eclipse%E5%AF%BC%E5%85%A5web%E9%A1%B9%E7%9B%AE%E7%9A%84%E7%9B%B8%E5%85%B3%E9%85%8D%E7%BD%AE/" class="pageViews">0</span>次
+      <i class="icon-smile icon"></i> 阅读数:<span id="/2020/06/03/sql%E6%97%B6%E9%97%B4%E6%88%B3%E4%B8%8E%E6%97%A5%E6%9C%9F%E7%9A%84%E8%BD%AC%E6%8D%A2/" class="pageViews">0</span>次
   </a>
 
 
         
-        <a href="/2020/05/03/eclipse%E5%AF%BC%E5%85%A5web%E9%A1%B9%E7%9B%AE%E7%9A%84%E7%9B%B8%E5%85%B3%E9%85%8D%E7%BD%AE/" class="archive-article-date">
-  	<time datetime="2020-05-03T09:14:26.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-03</time>
+        <a href="/2020/06/03/sql%E6%97%B6%E9%97%B4%E6%88%B3%E4%B8%8E%E6%97%A5%E6%9C%9F%E7%9A%84%E8%BD%AC%E6%8D%A2/" class="archive-article-date">
+  	<time datetime="2020-06-03T14:29:26.782Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-06-03</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>以导入ch5为例</p>
-<p>第一步：打开eclipse，导入项目<br>（1）单击File</p>
-<p><img src="http://q9y08g5p2.bkt.clouddn.com/201.png" alt="01"></p>
-<a id="more"></a>
-<p>（2）找到对应选项</p>
-<p><img src="http://q9y08g5p2.bkt.clouddn.com/202.png" alt="02"><br>（3）找到项目的目录<br><img src="http://q9y08g5p2.bkt.clouddn.com/203.png" alt="02"><br>（4）选中Copy projects into workspace<br><img src="http://q9y08g5p2.bkt.clouddn.com/204.png" alt="02"><br>（5）我们发现项目导入后是报错的<br><img src="http://q9y08g5p2.bkt.clouddn.com/205.png" alt="02"><br>（6）选中项目，单击鼠标右键<br><img src="http://q9y08g5p2.bkt.clouddn.com/206.png" alt="02"><br>（7）双击报错地方（注意：这个子窗口是Libraries）<br><img src="http://q9y08g5p2.bkt.clouddn.com/207.png" alt="02"></p>
-<p>（8）点击Environments 选择 JavaSE-1.8  点击 Apply and Close，最后点击finish</p>
-<p><img src="http://q9y08g5p2.bkt.clouddn.com/208.png" alt="02"></p>
-<p>（9）双击  Server Library….  选择你的eclipse配置的tomcat，最后点击finish<br><img src="http://q9y08g5p2.bkt.clouddn.com/209.png" alt="02"></p>
-<p>（10）最后点击Apply and Close<br><img src="http://q9y08g5p2.bkt.clouddn.com/210.png" alt="02"></p>
-<p>（11）选择input.jsp 单击右键，运行<br><img src="http://q9y08g5p2.bkt.clouddn.com/211.png" alt="02"></p>
-<p>（12）最后选择自己的tomcat，finish<br><img src="http://q9y08g5p2.bkt.clouddn.com/212.png" alt="02"></p>
-<p>（13）发现运行后还是错误<br><img src="http://q9y08g5p2.bkt.clouddn.com/213.png" alt="02"></p>
-<p>（14）我们查看项目，发现是java文件报错<br><img src="http://q9y08g5p2.bkt.clouddn.com/214.png" alt="02"></p>
-<p>（15）解决办法：（如果没有出现错误，不用理睬）</p>
-<p>选中项目，单击鼠标右键</p>
-<p><img src="http://q9y08g5p2.bkt.clouddn.com/215.png" alt="02"></p>
-<p>（16）我们发现，jdk错误<br><img src="http://q9y08g5p2.bkt.clouddn.com/216.png" alt="02"></p>
-<p>（17）找到这里，把13改为1.8，Apply and Close<br><img src="http://q9y08g5p2.bkt.clouddn.com/2177.png" alt="02"></p>
-<p>（18）运行后成功解决<br><img src="http://q9y08g5p2.bkt.clouddn.com/218.png" alt="02"></p>
-<p> (19)  如果运行的时候，出现一下以下错误，就按照15～17步骤操作<img src="http://q9y08g5p2.bkt.clouddn.com/19.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MzM5NDg0MA==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>如果修改不了，可以参照如下修改<br>找到项目的目录<br><img src="http://q9y08g5p2.bkt.clouddn.com/220.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MzM5NDg0MA==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>修改它的2个属性，确认并重启eclipse<img src="http://q9y08g5p2.bkt.clouddn.com/221.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MzM5NDg0MA==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+        <p>NOW()：当前日期时间<br>SELECT UNIX_TIMESTAMP(NOW());<br>将日期格式转成时间戳 1493016522 SELECT UNIX_TIMESTAMP(create_time);</p>
+<p>SELECT FROM_UNIXTIME(1493016148);<br>将时间戳转成日期格式 2017-04-24 14:42:28</p>
 
       
 
@@ -242,7 +199,7 @@
 				
 				<br>
 				<strong>本文链接：</strong>
-				<a class="btn" data-clipboard-text="https://hhufu.cn/2020/05/03/eclipse%E5%AF%BC%E5%85%A5web%E9%A1%B9%E7%9B%AE%E7%9A%84%E7%9B%B8%E5%85%B3%E9%85%8D%E7%BD%AE/" href="JavaScript:void(0)">点这里复制</a>
+				<a class="btn" data-clipboard-text="https://hhufu.cn/2020/06/03/sql%E6%97%B6%E9%97%B4%E6%88%B3%E4%B8%8E%E6%97%A5%E6%9C%9F%E7%9A%84%E8%BD%AC%E6%8D%A2/" href="JavaScript:void(0)">点这里复制</a>
 				<br>
 				<script src="https://cdn.jsdelivr.net/clipboard.js/1.5.12/clipboard.min.js"></script>
 				 <script type="text/javascript">
@@ -337,15 +294,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Java</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Jsp</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Web</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Mysql</a>
         		</li>
       		
 		</ul>
@@ -401,7 +350,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=https://hhufu.cn/2020/05/03/eclipse%E5%AF%BC%E5%85%A5web%E9%A1%B9%E7%9B%AE%E7%9A%84%E7%9B%B8%E5%85%B3%E9%85%8D%E7%BD%AE/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=https://hhufu.cn/2020/06/03/sql%E6%97%B6%E9%97%B4%E6%88%B3%E4%B8%8E%E6%97%A5%E6%9C%9F%E7%9A%84%E8%BD%AC%E6%8D%A2/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -415,15 +364,11 @@
   
 <nav id="article-nav">
   
-    <a href="/2020/05/04/%E5%BE%AE%E4%BF%A1%E5%BC%80%E5%8F%91%E8%80%85%E5%B7%A5%E5%85%B7-%E7%A0%81%E4%BA%91%E9%A1%B9%E7%9B%AE%E7%9A%84%E5%AF%BC%E5%85%A5/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          微信开发者工具--码云项目的导入
-        
-      </div>
-    </a>
   
+    <a href="/2020/06/03/%E8%AE%A1%E7%AE%97%E6%9F%90%E5%B9%B4%E6%98%AF%E5%90%A6%E4%B8%BA%E9%97%B0%E5%B9%B4%EF%BC%8C%E5%92%8C%E8%AE%A1%E7%AE%97%E5%A4%9A%E5%B0%91%E5%B9%B4%E8%87%B3%E5%A4%9A%E5%B0%91%E5%B9%B4%E9%97%B4%E6%9C%89%E5%A4%9A%E5%B0%91%E4%B8%AA%E9%97%B0%E5%B9%B4%EF%BC%8C%E8%BE%93%E5%87%BA%E5%B9%B4%E4%BB%BD/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">计算某年是否为闰年，和计算多少年至多少年间有多少个闰年，输出年份</div>
+      <i class="icon-circle-right"></i>
+    </a>
   
 </nav>
 
