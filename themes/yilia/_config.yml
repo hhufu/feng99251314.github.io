@@ -137,9 +137,9 @@ smart_menu:
   aboutme: '关于我'
 
 friends:
-  友情链接1: http://localhost:4000/
-  友情链接2: http://localhost:4000/
-  友情链接3: http://localhost:4000/
+  电车充电收费管理系统: http://122.51.125.210:8080/desingn
+  学生信息管理系统: http://122.51.125.210:8080/student
+  项目管理系统: http://122.51.125.210:8080/xmgc
   友情链接4: http://localhost:4000/
   友情链接5: http://localhost:4000/
   友情链接6: http://localhost:4000/
