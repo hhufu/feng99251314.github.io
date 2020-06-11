@@ -35,7 +35,7 @@ root: /
 # 文章太长，截断按钮文字
 excerpt_link: more
 # 文章卡片右下角常驻链接，不需要请设置为false
-show_all_link: '展开全文'
+show_all_link: '阅读全文'
 # 数学公式
 mathjax: false
 # 是否在新窗口打开链接
@@ -103,7 +103,7 @@ valine:
   appkey: n79ShAdWuV8hG6cbp61CRl9l
   notify: false
   verfy: false
-  placeholser: 一起来评论吧！
+  placeholser: 沙发等你来创造！
   
 # 样式定制 - 一般不需要修改，除非有很强的定制欲望…
 style:
@@ -133,11 +133,11 @@ slider:
 #  friends: false
 smart_menu:
   innerArchive: '所有文章'
-  friends: '友链'
+  friends: '项目'
   aboutme: '关于我'
 
 friends:
-  电车充电收费管理系统: http://122.51.125.210:8080/desingn
+  电车充电收费管理系统: http://122.51.125.210:8080/design
   学生信息管理系统: http://122.51.125.210:8080/student
   项目管理系统: http://122.51.125.210:8080/xmgc
   二十四节气: http://122.51.125.210
